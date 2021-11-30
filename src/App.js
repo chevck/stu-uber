@@ -14,6 +14,7 @@ import Cancel from "./assets/svgs/cancel.svg";
 import Renault from "./assets/imgs/renault.png";
 import Megane from "./assets/imgs/megane.png";
 import ArrowUps from "./assets/imgs/logo-placeholder-white.png";
+// import Mercedes from "./assets/imgs/Mercedes.png";
 import { CarType } from "./car";
 
 function App() {
