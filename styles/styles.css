@@ -438,7 +438,11 @@ main div {
 
 #about {
   background-color: #f8f8fa;
-  height: 100vh;
+  height: unset;
+}
+
+#about .container {
+  height: unset;
 }
 
 section {
@@ -456,7 +460,7 @@ section {
 }
 
 .topTextContainer {
-  height: 20%;
+  margin: 5% 0 2.5%;
 }
 
 .topTextContainer h4 {
@@ -473,21 +477,22 @@ section {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  gap: 10% 5%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.CardsContainer > div {
+  width: 28.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 90%;
-}
-
-.CardsContainer > div {
-  width: 30%;
-  height: 50%;
+  gap: 10% 5%;
+  margin-bottom: 5%;
 }
 
 .CardsContainer > div h4 {
@@ -496,7 +501,7 @@ section {
   font-weight: 600;
   line-height: 1.5;
   color: #0c2344;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2.5%;
 }
 
 .CardsContainer > div p {
@@ -504,6 +509,7 @@ section {
   color: #6f7a8d;
   font-size: calc(0.2rem + 1vw);
   font-weight: normal;
+  line-height: 1.5;
 }
 
 .CardsContainer .card-top {
@@ -1004,6 +1010,21 @@ footer .footerWrapper .ShopTopUp_Footer_logo .links {
   }
   #landing-page .landing_page_container_content .landing_page_container_content_text h3 {
     width: 100%;
+  }
+  .CardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    gap: 10% 5%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .CardsContainer > div {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=styles.css.map */
