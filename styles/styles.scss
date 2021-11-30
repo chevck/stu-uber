@@ -1,0 +1,622 @@
+// ============COLORS==================
+$ShopTopUp_Black: rgba(12, 35, 68, 1);
+$ShopTopUp_Blackalt: rgba(111, 122, 141, 1);
+$ShopTopUp_Blue: rgba(0, 92, 255, 1);
+$ShopTopUp_White: rgba(255, 255, 255, 1);
+$ShopTopUp_Gray: rgba(248, 248, 250, 1);
+
+// ==============FONTS==================
+$ShopTopUp_Font: "Sora", sans-serif;
+$baseFontSize: 16px;
+// =============MIXINS=================
+@mixin sora-paragraph($color: $ShopTopUp_Black, $size: $baseFontSize) {
+  font-family: $ShopTopUp_Font;
+  color: $color;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin sora-mini-header($color: $ShopTopUp_Black, $size: calc(1.2rem + 0.5vw)) {
+  font-family: $ShopTopUp_Font;
+  font-size: $size;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $color;
+}
+
+@mixin sora-header {
+  @include sora-mini-header($ShopTopUp_Black);
+  font-size: calc(1.2rem + 1vw);
+}
+
+@mixin sora-landing-page {
+  @include sora-paragraph($ShopTopUp_White);
+  font-weight: 800;
+  font-size: calc(1.5rem + 1.5vw);
+}
+
+@mixin ShopTopUp_Button {
+  @include sora-paragraph($ShopTopUp_White);
+  background-color: $ShopTopUp_Blue;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1440px;
+  width: 100%;
+
+  div {
+    box-sizing: border-box;
+  }
+}
+// ===============LANDING SECTION===================
+#landing-page {
+  width: 100%;
+  height: 846px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .landing_page_background {
+    max-width: 1806.38px;
+    position: absolute;
+  }
+  .landing_page_container {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    padding: 3% 0 7%;
+    flex-direction: column;
+    & > div {
+      display: flex;
+      position: relative;
+    }
+    &_navigation {
+      width: 100%;
+      background: white;
+      height: 10%;
+      border-radius: 1rem;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      .ShopTopUp_logo {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        padding-left: 5%;
+
+        hr {
+          color: $ShopTopUp_Blackalt;
+          border: none;
+          height: 50%;
+          width: 1px;
+          margin: 0 2%;
+          background-color: rgba(234, 237, 245, 1);
+        }
+        div {
+          width: 30%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          & img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            max-width: 100%;
+          }
+        }
+        div:first-child {
+          width: 10%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .landing_page_mini_CTA {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        width: 50%;
+        height: 100%;
+        padding-right: 5%;
+        a {
+          @include ShopTopUp_Button();
+          width: 35%;
+          height: 70%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          span {
+            font-size: calc(0.4rem + 0.5vw);
+          }
+        }
+      }
+    }
+    &_content {
+      height: 85%;
+      display: flex;
+      width: 100%;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+
+      & > div {
+        height: 80%;
+      }
+
+      &_text div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        & h5 {
+          @include sora-landing-page();
+          margin-bottom: 3%;
+        }
+        & h3 {
+          @include sora-mini-header($ShopTopUp_White);
+          width: 85%;
+        }
+      }
+    }
+    .landing_page_container_content_text {
+      background-color: unset;
+      width: 50%;
+    }
+    .landing_page_content_form {
+      background-color: white;
+      border-radius: 1rem;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      hr {
+        color: $ShopTopUp_Blackalt;
+        border: none;
+        height: 1px;
+        width: 100%;
+        margin: 0;
+        background-color: rgba(234, 237, 245, 1);
+      }
+      .form-heading {
+        @include sora-mini-header();
+        width: 85%;
+        display: flex;
+        align-items: center;
+        height: 15%;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+      height: 85%;
+      & > div {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      & .formgroup {
+        display: flex;
+        margin-top: 5%;
+        justify-content: space-between;
+        & > div {
+          width: 48%;
+          display: flex;
+          flex-direction: column;
+          input {
+            width: 100%;
+            box-sizing: border-box;
+          }
+        }
+      }
+      label {
+        @include sora-paragraph($ShopTopUp_Black, 14px);
+        display: block;
+      }
+      input,
+      button,
+      select {
+        border: 1px solid rgba(234, 237, 245, 1);
+        border-radius: 0.5rem;
+        margin-top: 0.35rem;
+        box-sizing: border-box;
+        padding: 0.75rem;
+        width: 100%;
+        position: relative;
+        &:focus {
+          border: 1px solid rgb(193, 194, 197);
+          outline: none;
+        }
+        &::placeholder {
+          @include sora-paragraph(rgba(12, 35, 68, 0.5), 16px);
+        }
+      }
+    }
+    #submitButton {
+      @include ShopTopUp_Button();
+      cursor: pointer;
+      margin: 2.5% 0 6%;
+      padding: 3.5% 0;
+      outline: none;
+      border: 1px solid rgba(234, 237, 245, 1);
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      width: 80%;
+      height: 10%;
+      &:focus {
+        border: 1px solid rgb(193, 194, 197);
+        outline: none;
+      }
+      &::placeholder {
+        @include sora-paragraph(rgba(12, 35, 68, 0.5), 16px);
+      }
+    }
+  }
+  // =============== ABOUT SECTION=========================
+  #about {
+  }
+  // =============== CARS SECTION =========================
+  #cars {
+    box-sizing: border-box;
+  }
+  // =============== ADONS SECTION=========================
+  #adons {
+  }
+  // =============== MAIN CTA SECTION =========================
+  #main-cta {
+  }
+  // =============== FOOTER =========================
+  footer {
+  }
+  .landing_page {
+  }
+}
+
+#about {
+  background-color: #f8f8fa;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  align-items: center;
+}
+
+.topTextContainer {
+  height: 20%;
+  & h4 {
+    @include sora-header();
+  }
+}
+
+.CardsContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90%;
+  & > div {
+    width: 30%;
+    height: 50%;
+
+    & h4 {
+      @include sora-mini-header($ShopTopUp_Black, calc(0.7rem + 1vw));
+      margin-bottom: 0.75rem;
+    }
+    & p {
+      @include sora-paragraph($ShopTopUp_Blackalt, calc(0.2rem + 1vw));
+    }
+  }
+  .card-top {
+    height: 30%;
+    position: relative;
+    .circle {
+      width: 3.5vw;
+      height: 3.5vw;
+      background-color: #c9c9d5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    & img {
+      position: relative;
+      width: 70%;
+      height: 70%;
+    }
+    & svg {
+      position: relative;
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+.container {
+  width: 80%;
+  height: 80%;
+}
+
+#cars {
+  width: 100%;
+  justify-content: flex-end;
+  .container {
+    width: 90%;
+  }
+}
+.CarCardsContainer {
+  height: 90% !important;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+  .CarCards {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(248, 248, 250, 1);
+    border-radius: 0.75rem;
+    & h3 {
+      @include sora-mini-header($ShopTopUp_Black, calc(1.1rem + 0.5vw));
+      text-align: left;
+    }
+    .card-wrapper {
+      width: 80%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      & > div:first-child {
+        align-self: flex-start;
+      }
+    }
+  }
+  .car-image {
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .car-extra-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    & > div {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 30%;
+      }
+      p {
+        @include sora-paragraph($ShopTopUp_Blackalt, 14px);
+        margin-top: 4px;
+      }
+    }
+  }
+  .car-cta {
+    width: 100%;
+    button {
+      @include ShopTopUp_Button();
+      cursor: pointer;
+      margin: 2.5% 0 6%;
+      padding: 3.5% 0;
+      outline: none;
+      border: 1px solid rgba(234, 237, 245, 1);
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      width: 100%;
+      &:focus {
+        border: 1px solid rgb(193, 194, 197);
+        outline: none;
+      }
+      &::placeholder {
+        @include sora-paragraph(rgba(12, 35, 68, 0.5), 16px);
+      }
+      & span:first-child {
+        display: inline-block;
+        margin-right: 3%;
+      }
+    }
+  }
+}
+#adons {
+  background-color: $ShopTopUp_Black;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .card-top {
+      height: 30%;
+      position: relative;
+      .circle {
+        width: 3.5vw;
+        height: 3.5vw;
+        background-color: #3d4f69;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+
+      & img {
+        position: relative;
+        width: 70%;
+        height: 70%;
+      }
+      & svg {
+        position: relative;
+        width: 50%;
+        height: 50%;
+      }
+    }
+
+    & .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h5 {
+        @include sora-mini-header($ShopTopUp_White, calc(1.2rem + 1.5vw));
+      }
+    }
+
+    & > div {
+      width: 30%;
+      height: 90%;
+      background-color: unset;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h4 {
+        @include sora-mini-header($ShopTopUp_White, calc(1.1rem + 0.5vw));
+        margin: 2% 0;
+      }
+      p {
+        @include sora-paragraph($ShopTopUp_White, calc(0.6rem + 0.5vw));
+        line-height: 1.5;
+      }
+    }
+  }
+  .cards-wrapper {
+    height: 40%;
+  }
+}
+
+#mainCTA {
+  height: 60vh;
+  background-color: #f8f8fa;
+  .cta-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h5 {
+      @include sora-mini-header($ShopTopUp_Black, calc(1.5rem + 1.3vw));
+    }
+    p {
+      @include sora-paragraph($ShopTopUp_Blackalt, calc(0.95rem + 0.5vw));
+      width: 65%;
+      text-align: center;
+      margin: 1.5% 0 2.5%;
+    }
+    button {
+      @include ShopTopUp_Button();
+      cursor: pointer;
+      padding: 1.5% 0;
+      outline: none;
+      border: 1px solid rgba(234, 237, 245, 1);
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      width: 30%;
+      &:focus {
+        border: 1px solid rgb(193, 194, 197);
+        outline: none;
+      }
+      &::placeholder {
+        @include sora-paragraph(rgba(12, 35, 68, 0.5), 16px);
+      }
+      & span:first-child {
+        display: inline-block;
+        margin-right: 3%;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footerWrapper {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      @include sora-paragraph($ShopTopUp_Black, calc(0.55rem + 0.55vw));
+    }
+    .contact {
+      p {
+        margin-bottom: 2%;
+      }
+    }
+
+    .ShopTopUp_Footer_logo {
+      width: 30%;
+      a {
+        @include sora-paragraph($ShopTopUp_Black, calc(0.55rem + 0.55vw));
+        margin-right: 2%;
+        text-decoration: none;
+      }
+
+      .links {
+        margin-top: 7%;
+      }
+    }
+  }
+}
+// ================MEDIA QUERIES===========================
+@media screen and (max-width: 760px) {
+  #landing-page {
+    .landing_page_container {
+      padding: 0;
+
+      &_navigation {
+        display: none !important;
+      }
+    }
+    .landing_page_container_content {
+      flex-direction: column;
+      width: 100%;
+      height: 95%;
+      .landing_page_content_form {
+        width: 100%;
+        height: 100% !important;
+      }
+      .landing_page_container_content_text {
+        width: 100%;
+        height: 50%;
+        h3 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
