@@ -22,8 +22,8 @@ function App() {
     <div className="stu-drive">
       <div className="container-fluid stu-drive_top-section">
         <div className="row">
-          <div className="col-1"></div>
-          <div className="col-10">
+          <div className="col-md-1"></div>
+          <div className="col-md-10 col-12">
             <div class="stu-drive_top-section_navigation">
               <img src={Logo} alt="ShopTopUp logo" />
               <a href="/" className="stu-drive_top-section_navigation_button">
@@ -32,7 +32,7 @@ function App() {
             </div>
             <div className="stu-drive_top-section_body">
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6 col-12">
                   <div className="stu-drive_top-section_body_left">
                     <h1>Drive. Earn. Own.</h1>
                     <h5>
@@ -41,7 +41,7 @@ function App() {
                     </h5>
                   </div>
                 </div>
-                <div className="col-6">
+                <div className="col-md-6 col-12">
                   <div className="stu-drive_top-section_body_right">
                     <h4>Start Driving</h4>
                     <hr />
@@ -125,7 +125,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="col-1"></div>
+          <div className="col-md-1"></div>
         </div>
       </div>
       <div className="container-fluid stu-drive_section-two">
@@ -134,7 +134,7 @@ function App() {
             How ShopTopUp Drive-to-Own works
           </h4>
           <div className="row">
-            <div className="col-4 stu-drive_section-two_howto">
+            <div className="col-md-4 col-12 stu-drive_section-two_howto">
               <div className="stu-drive_section-two_howto_icon-wrapper">
                 <img src={User} alt="user" className="img-fluid" />
               </div>
@@ -144,7 +144,7 @@ function App() {
                 your journey to becoming a vehicle owner.
               </p>
             </div>
-            <div className="col-4 stu-drive_section-two_howto">
+            <div className="col-md-4 col-12 stu-drive_section-two_howto">
               <div className="stu-drive_section-two_howto_icon-wrapper">
                 <img src={Doc} alt="user" className="img-fluid" />
               </div>
@@ -156,7 +156,7 @@ function App() {
                 your journey to becoming a vehicle owner.
               </p>
             </div>
-            <div className="col-4 stu-drive_section-two_howto">
+            <div className="col-md-4 col-12 stu-drive_section-two_howto">
               <div className="stu-drive_section-two_howto_icon-wrapper">
                 <img src={Training} alt="user" className="img-fluid" />
               </div>
@@ -171,7 +171,7 @@ function App() {
             </div>
           </div>
           <div className="row">
-            <div className="col-4 stu-drive_section-two_howto">
+            <div className="col-md-4 col-12 stu-drive_section-two_howto">
               <div className="stu-drive_section-two_howto_icon-wrapper">
                 <img src={Vehicle} alt="user" className="img-fluid" />
               </div>
@@ -183,7 +183,7 @@ function App() {
                 start driving.
               </p>
             </div>
-            <div className="col-4 stu-drive_section-two_howto">
+            <div className="col-md-4 col-12 stu-drive_section-two_howto">
               <div className="stu-drive_section-two_howto_icon-wrapper">
                 <img src={Money} alt="user" className="img-fluid" />
               </div>
@@ -211,7 +211,7 @@ function App() {
       <div className="container-fluid stu-drive_section-four">
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-md-3 col-12">
               <h2 className="stu-drive_section-four_title">
                 Explore our Benefits
               </h2>
@@ -221,10 +221,10 @@ function App() {
                 alt="arrow-ups"
               />
             </div>
-            <div className="col-2" />
-            <div className="col-7 stu-drive_section-four_benefits">
+            <div className="col-md-2" />
+            <div className="col-md-7 col-12 stu-drive_section-four_benefits">
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6 col-12">
                   <div className="stu-drive_section-four_benefits_icon-wrapper">
                     <img src={VehicleWhite} alt="user" className="img-fluid" />
                   </div>
@@ -236,7 +236,7 @@ function App() {
                     driving to own your van.
                   </p>
                 </div>
-                <div className="col-6">
+                <div className="col-md-6 col-12">
                   <div className="stu-drive_section-four_benefits_icon-wrapper">
                     <img src={Services} alt="user" className="img-fluid" />
                   </div>
@@ -250,7 +250,7 @@ function App() {
                 </div>
               </div>
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6 col-12">
                   <div className="stu-drive_section-four_benefits_icon-wrapper">
                     <img src={MoneyWhite} alt="user" className="img-fluid" />
                   </div>
@@ -262,7 +262,7 @@ function App() {
                     driving to own your van.
                   </p>
                 </div>
-                <div className="col-6">
+                <div className="col-md-6 col-12">
                   <div className="stu-drive_section-four_benefits_icon-wrapper">
                     <img src={Cancel} alt="user" className="img-fluid" />
                   </div>
@@ -291,7 +291,7 @@ function App() {
       </div>
       <div className="container stu-drive_footer">
         <div className="row">
-          <div className="col-4">
+          <div className="col-md-4 col-12">
             <div className="stu-drive_footer_left">
               <div className="stu-drive_footer_left-brand">
                 <img src={Logo} alt="stu-logo" className="img-fluid" />
@@ -306,7 +306,7 @@ function App() {
             </div>
           </div>
           <div className="col-4"></div>
-          <div className="col-4">
+          <div className="col-md-4 col-12">
             <p className="stu-drive_footer_right">
               For further questions and assistance, contact us.
               <br />

@@ -21,6 +21,10 @@ a {
       justify-content: space-between;
       margin-top: 2rem;
 
+      @media only screen and (max-width: 768px) {
+        padding: 0.7rem;
+      }
+
       &_button {
         color: white;
         font-size: 16px;
@@ -37,12 +41,35 @@ a {
 
     &_body {
       padding: 8rem 0;
+
+      @media only screen and (max-width: 768px) {
+        padding: 5rem 0;
+      }
+
       &_left {
         color: #fff;
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
         width: 42%;
+
+        @media only screen and (max-width: 768px) {
+          position: initial;
+          width: 100%;
+          transform: initial;
+
+          h1 {
+            font-size: 45px !important;
+            line-height: 55px !important;
+            text-align: center !important;
+          }
+
+          h5 {
+            width: 100% !important;
+            font-size: 20px !important;
+            text-align: center !important;
+          }
+        }
 
         h5 {
           width: 69%;
@@ -64,6 +91,11 @@ a {
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
         border-radius: 16px;
         padding: 20px 0px;
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          margin-top: 2rem;
+        }
 
         h4,
         form {
@@ -104,6 +136,9 @@ a {
 
     .row {
       margin-bottom: 2.5rem;
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 0;
+      }
     }
 
     &_title {
@@ -112,8 +147,19 @@ a {
       line-height: 45px;
       color: #0c2344;
       margin-bottom: 3.5rem;
+      @media only screen and (max-width: 768px) {
+        margin-left: 1rem;
+      }
     }
     &_howto {
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+        &_icon-wrapper {
+          width: 11.5vw !important;
+          height: 11.5vw !important;
+        }
+      }
       &_icon-wrapper {
         width: 3.5vw;
         height: 3.5vw;
@@ -151,12 +197,19 @@ a {
 
   &_section-three {
     padding: 7rem 0;
+
+    @media only screen and (max-width: 768px) {
+      padding: 5rem 2rem;
+    }
     &_title {
       font-weight: 600;
       font-size: 36px;
       line-height: 45px;
       color: #0c2344;
       margin-bottom: 3.5rem;
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 2rem;
+      }
     }
     &_cars {
       display: flex;
@@ -172,6 +225,20 @@ a {
         padding: 3rem;
         text-align: center;
         margin-right: 3rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 340px;
+          height: 430px;
+          padding: 2rem;
+
+          &:last-child {
+            margin-right: 1rem !important;
+          }
+        }
 
         &_name {
           font-weight: 600;
@@ -218,15 +285,25 @@ a {
     background-color: #0c2344;
     padding: 7rem 0;
 
+    @media only screen and (max-width: 768px) {
+      padding: 5rem 1.25rem;
+    }
+
     &_title {
       color: #fff;
       font-weight: 600;
       font-size: 48px;
       line-height: 60px;
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 3rem;
+      }
     }
 
     &_arrowups {
       margin-top: 2rem;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     &_benefits {
@@ -234,6 +311,9 @@ a {
 
       .row {
         margin-bottom: 3rem;
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 0;
+        }
       }
 
       &_icon-wrapper {
@@ -244,6 +324,11 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: 768px) {
+          width: 13.5vw;
+          height: 13.5vw;
+        }
       }
       img {
         position: relative;
@@ -265,6 +350,10 @@ a {
         font-size: 16px;
         line-height: 160%;
         letter-spacing: 0.01em;
+
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 3rem;
+        }
       }
     }
   }
@@ -273,6 +362,11 @@ a {
     background-color: #eaedf5;
     padding: 10rem 0;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      padding: 5rem 0;
+      padding-bottom: 9rem;
+    }
 
     &_title {
       font-weight: 600;
@@ -291,6 +385,10 @@ a {
       width: 43%;
       margin: auto;
       margin-top: 10px;
+
+      @media only screen and (max-width: 768px) {
+        width: 90%;
+      }
     }
 
     &_button {
@@ -313,13 +411,22 @@ a {
   }
 
   &_footer {
-    padding: 5rem 0;
+    padding: 5rem;
+    @media only screen and (max-width: 768px) {
+      padding: 2rem;
+      margin: 3rem 0px;
+    }
     &_right {
       font-size: 16px;
       line-height: 160%;
       letter-spacing: 0.01em;
       color: #0c2344;
       font-weight: 300;
+      @media only screen and (max-width: 768px) {
+        margin: 1rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
     }
 
     &_left {
@@ -339,6 +446,10 @@ a {
           margin-bottom: 0;
           font-size: 21px;
         }
+
+        @media only screen and (max-width: 768px) {
+          justify-content: center;
+        }
       }
 
       &_links {
@@ -351,6 +462,9 @@ a {
           line-height: 20px;
           letter-spacing: 0.01em;
           color: #0c2344;
+        }
+        @media only screen and (max-width: 768px) {
+          justify-content: center;
         }
       }
     }
