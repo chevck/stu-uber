@@ -25,6 +25,36 @@ a {
         padding: 0.7rem;
       }
 
+      &_logo-side {
+        display: flex;
+        align-items: center;
+        span {
+          height: 30px;
+          width: 0.3px;
+          outline: 0.1px solid #eaedf5;
+          margin: 1rem 15px;
+        }
+
+        h4 {
+          color: #0c2344;
+          font-weight: 800;
+          margin-bottom: 0;
+          font-size: 21px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          justify-content: center;
+
+          span {
+            display: none !important;
+          }
+
+          h4 {
+            display: none !important;
+          }
+        }
+      }
+
       &_button {
         color: white;
         font-size: 15px;

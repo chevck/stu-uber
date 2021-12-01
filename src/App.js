@@ -25,7 +25,11 @@ function App() {
           <div className="col-md-1"></div>
           <div className="col-md-10 col-12">
             <div class="stu-drive_top-section_navigation">
-              <img src={Logo} alt="ShopTopUp logo" />
+              <div className="stu-drive_top-section_navigation_logo-side">
+                <img src={Logo} alt="ShopTopUp logo" />
+                <span className="breaker"></span>
+                <h4>ShopTopUp Drive</h4>
+              </div>
               <a href="/" className="stu-drive_top-section_navigation_button">
                 Get Started now <img src={ForwardIcon} alt="forward-icon" />
               </a>
