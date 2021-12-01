@@ -27,15 +27,20 @@ a {
 
       &_button {
         color: white;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: normal;
         background-color: #005cff;
         border-radius: 0.5rem;
         text-decoration: none;
         padding: 10px 16px;
-        width: 202px;
+        width: 185px;
         display: flex;
         justify-content: space-between;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 14px;
+          width: 165px;
+        }
       }
     }
 
@@ -43,7 +48,7 @@ a {
       padding: 8rem 0;
 
       @media only screen and (max-width: 768px) {
-        padding: 5rem 0;
+        padding: 4rem 0;
       }
 
       &_left {
@@ -101,6 +106,11 @@ a {
         form {
           padding: 0 2rem;
         }
+
+        &-form {
+          font-size: 14px;
+        }
+
         h4 {
           font-size: 21px;
         }
@@ -108,6 +118,7 @@ a {
         input,
         select {
           margin-top: 5px;
+          font-size: 14.5px;
         }
 
         .row {
@@ -136,6 +147,10 @@ a {
   &_section-two {
     padding: 7rem 0;
     background-color: #f8f8fa;
+
+    @media only screen and (max-width: 768px) {
+      padding: 4rem 0;
+    }
 
     .row {
       margin-bottom: 2.5rem;
@@ -237,9 +252,15 @@ a {
           width: 340px;
           height: 430px;
           padding: 2rem;
+          margin: 2px;
+          margin-right: 10px;
 
           &:last-child {
-            margin-right: 1rem !important;
+            margin-right: 5px !important;
+          }
+
+          &_name {
+            font-size: 23px !important;
           }
         }
 
@@ -391,6 +412,7 @@ a {
 
       @media only screen and (max-width: 768px) {
         width: 90%;
+        font-size: 21px;
       }
     }
 

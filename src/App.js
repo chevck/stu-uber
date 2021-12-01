@@ -45,7 +45,7 @@ function App() {
                   <div className="stu-drive_top-section_body_right">
                     <h4>Start Driving</h4>
                     <hr />
-                    <form id="landing-form">
+                    <form className="stu-drive_top-section_body_right-form">
                       <div className="row">
                         <div className="col-6">
                           <label for="firstName">First name</label>
@@ -86,7 +86,7 @@ function App() {
                           <input
                             name=""
                             className="form-control"
-                            placeholder="name@example.com"
+                            placeholder="+234 302 433 50"
                           />
                         </div>
                       </div>
@@ -206,6 +206,7 @@ function App() {
           <CarType img={Renault} carname="Tesla" />
           <CarType img={Megane} carname="Renault Megane RS" />
           <CarType img={Renault} carname="Tesla" />
+          <CarType img={Megane} carname="Mercedes Benz" />
         </div>
       </div>
       <div className="container-fluid stu-drive_section-four">
