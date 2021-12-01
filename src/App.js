@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import Logo from "./assets/svgs/Logo.svg";
+import Logo from "./assets/svgs/Logo-drive.svg";
 import ForwardIcon from "./assets/svgs/Navigate-forward.svg";
 import User from "./assets/svgs/user.svg";
 import Doc from "./assets/svgs/doc.svg";
