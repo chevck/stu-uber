@@ -85,7 +85,7 @@ a {
       &_left {
         color: #fff;
         position: absolute;
-        top: 50%;
+        top: 60%;
         transform: translate(0, -50%);
         width: 42%;
 
@@ -171,6 +171,10 @@ a {
 
           img {
             margin-left: 15px;
+          }
+
+          &:disabled {
+            background-color: #aeb1b6;
           }
         }
       }

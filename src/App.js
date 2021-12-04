@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import Logo from "./assets/svgs/Logo-drive.svg";
 import ForwardIcon from "./assets/svgs/Navigate-forward.svg";
@@ -18,6 +18,7 @@ import ArrowUps from "./assets/imgs/logo-placeholder-white.png";
 import { CarType } from "./car";
 
 function App() {
+  const [country, setCountry] = useState("");
   return (
     <div className="stu-drive">
       <div className="container-fluid stu-drive_top-section">
@@ -45,12 +46,16 @@ function App() {
                     </h5>
                   </div>
                 </div>
-                <div className="col-md-6 col-12">
+                <div className="col-md-6 col-12" id="registerform">
                   <div className="stu-drive_top-section_body_right">
                     <h4>Start Driving</h4>
                     <hr />
-                    <form className="stu-drive_top-section_body_right-form">
-                      <div className="row">
+                    <form
+                      className="stu-drive_top-section_body_right-form"
+                      action={`https://tradedepot.typeform.com/to/pNmmaFtq#country=${country}`}
+                      target="_blank"
+                    >
+                      {/* <div className="row">
                         <div className="col-6">
                           <label for="firstName">First name</label>
                           <input
@@ -93,7 +98,7 @@ function App() {
                             placeholder="+234 302 433 50"
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="row">
                         <div className="col-12">
                           <label for="city" name="city">
@@ -104,22 +109,28 @@ function App() {
                             type="select"
                             className="form-control"
                             placeholder="name@example.com"
+                            onChange={({ target: { value } }) =>
+                              setCountry(value)
+                            }
                           >
-                            <option value="lagos">Lagos</option>
-                            <option value="ibadan">Ibadan</option>
-                            <option value="abuja">Abuja</option>
-                            <option value="ilorin">Ilorin</option>
-                            <option value="kano">Kano</option>
-                            <option value="port harcourt">Port Harcourt</option>
-                            <option value="calabar">Calabar</option>
-                            <option value="jos">Jos</option>
+                            <option disabled selected>
+                              Select Your City
+                            </option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Ibadan">Ibadan</option>
+                            <option value="Abuja">Abuja</option>
+                            <option value="Ilorin">Ilorin</option>
+                            <option value="Kano">Kano</option>
+                            <option value="Port Harcourt">Port Harcourt</option>
+                            <option value="Calabar">Calabar</option>
+                            <option value="Jos">Jos</option>
                           </select>
                         </div>
-                        <div className="col-6"></div>
                       </div>
                       <button
                         type="submit"
                         className="stu-drive_top-section_body_right_form-button"
+                        disabled={!country}
                       >
                         Get Started <img src={ForwardIcon} alt="forward-icon" />
                       </button>
@@ -290,7 +301,7 @@ function App() {
           We have a van with your name on it. Earn money weekly for driving to
           own your van.
         </p>
-        <a href="/" className="stu-drive_section-five_button">
+        <a href="#registerform" className="stu-drive_section-five_button">
           Get Started <img src={ForwardIcon} alt="forward-icon" />
         </a>
       </div>
