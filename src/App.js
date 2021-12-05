@@ -50,10 +50,10 @@ function App() {
                   <div className="stu-drive_top-section_body_right">
                     <h4>Start Driving</h4>
                     <hr />
-                    <form
+                    <div
                       className="stu-drive_top-section_body_right-form"
-                      action={`https://tradedepot.typeform.com/to/pNmmaFtq#country=${country}`}
-                      target="_blank"
+                      // action={`https://tradedepot.typeform.com/to/pNmmaFtq#country=${country}`}
+                      // target="_blank"
                     >
                       {/* <div className="row">
                         <div className="col-6">
@@ -131,10 +131,12 @@ function App() {
                         type="submit"
                         className="stu-drive_top-section_body_right_form-button"
                         disabled={!country}
+                        data-tf-popup="pNmmaFtq"
+                        data-tf-iframe-props="title=STU-Drive"
                       >
                         Get Started <img src={ForwardIcon} alt="forward-icon" />
                       </button>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
