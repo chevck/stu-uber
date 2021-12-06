@@ -23,7 +23,7 @@ function App() {
     <div className="stu-drive">
       <div className="container-fluid stu-drive_top-section">
         <div className="row">
-          <div className="col-md-1"></div>
+          <div className="col-md-1 d-none d-sm-block"></div>
           <div className="col-md-10 col-12">
             <div class="stu-drive_top-section_navigation">
               <div className="stu-drive_top-section_navigation_logo-side">
